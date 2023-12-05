@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my-post</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    
+    <%- include('includes/header') %>
+
+    <% if (!posts || posts.length ===0){ %>
+        <div class = 'blog_div2'>
+            <p> Nothing Has Been Generated Yet!</p>
+            <a href="/"> Go to Generator</a>
+        </div>
+    <% }else{ %>
+        <ul>
+            <% for (const post of posts){ %>
+
+                <div class = 'blog_div2'>
+                    <li>
+                        <%-include('includes/post-items', {post:post}) %>
+                    </li>
+                </div>
+
+            <% } %>
+        </ul>
+
+    <% } %>
+</body>

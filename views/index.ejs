@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shape Generator</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    
+    <%- include('includes/header') %>
+
+    <!-- Form #2 -->
+    <div class="blog_div2">
+        <h2>Poem Generator</h2>
+        <form action="/" id = "form_2" class = "blog_div2_form" autocomplete="on" method="POST">
+            <div>
+                <label for="author">Author:</label>
+                <input type="text" id = "author" name = "author" required>
+            </div>
+
+            <div>
+                <label for="poem_name">Poem Name:</label>
+                <input type="text" id = "poem_name" name = "poem_name" required>
+            </div>
+            <div class = 'shape'>
+                <label for="shape">Shape</label>
+                <select id="shape" name = "shape">
+                    <option value="circle">circle</option>
+                    <option value="square">square</option>
+                    <option value="triangle">triangle</option>
+                    <option value="pentgon">pentgon</option>
+                </select>
+            </div>
+            
+            <div>
+                <h2>Paste Your Text</h2>
+                <textarea name="text_content" id="text_content"></textarea>
+            </div>
+
+            <div class = "blog_div2_btn">
+                <button type="Submit">Save</button>
+                <button>Clear</button>
+            </div>
+        </form>
+    </div>
+</body>

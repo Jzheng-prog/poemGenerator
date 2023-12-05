@@ -1,0 +1,22 @@
+<article>
+
+    <div>
+        <div class="box-style">
+            <p> Author: <%=post.author%> </p>    
+            <p> Shape: <%=post.shape%> </p>
+        </div>
+        <p> Poem Name: <strong> <%=post.poem_Name%> </strong></p>
+    </div>
+
+    <% if(post.shape === 'square'){ %>
+
+        <p> <%=post.text%> </p>
+
+    <% } else if(post.shape === 'triangle'){ %>
+        <p>This is a tranlgle</p>
+    <% }else { %>
+        <p>Not tirangle or square</p>
+    <% } %>
+
+    
+</article>
